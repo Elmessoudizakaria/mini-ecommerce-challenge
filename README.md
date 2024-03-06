@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# Ecommerce MVP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is a ecommerce MVP developped with React 18+ TypeScript.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mainly the project contains 3 folders:
+- *Containers:* contains the smart components that can make http calls and manipulate data, they represent a page.
+- *Components:* contains the display components that can be re-used across differents pages.
+- *Shared:* contains all shared fonctionalities like models, contexts, tools, store (if we need a state management tool like `redux`)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This MVP provides 3 fonctionalities to the user
 
-- Configure the top-level `parserOptions` property like this:
+- Display a list of products so that the user can choose what to buy.
+-  add products to shopping cart, navigate to the cart and manage the added products (remove or adjust quantity).
+- Display product details on user click by a user friendly modal.
+- the main app pages are responsive to differente user devices.
+ 
+## Run the app
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+it's easy to run the app in your local machine.
+- *1*: clone the project
+- *2*: access to the project
+- *3*: on cmd run `npm install && npm run dev`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+you can access to the app directly with from 
+[stackbliz](https://stackblitz.com/~/github.com/Elmessoudizakaria/mini-ecommerce-challenge)
